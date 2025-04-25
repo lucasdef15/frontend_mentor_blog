@@ -17,13 +17,13 @@ const DesktopNavBar = () => {
               <NavLink to="/" end className="desktop_nav_link">
                 Home
               </NavLink>
-              <NavLink to="/about" className="desktop_nav_link">
+              <NavLink to="/blog" className="desktop_nav_link">
                 Blog
               </NavLink>
-              <NavLink to="/articles" className="desktop_nav_link">
+              <NavLink to="/about" className="desktop_nav_link">
                 About
               </NavLink>
-              <NavLink to="/articles" className="desktop_nav_link">
+              <NavLink to="/newsletter" className="desktop_nav_link">
                 Newsletter
               </NavLink>
             </nav>

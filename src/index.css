@@ -97,7 +97,7 @@ body {
   font-family: "DMSans", sans-serif;
   background: #fbf9f7;
   line-height: 1.5;
-  overflow-x: hidden;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -130,6 +130,7 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {

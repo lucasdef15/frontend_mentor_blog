@@ -45,7 +45,7 @@ const Header = () => {
       </header>
 
       {/* mobile menu floating */}
-      <FloatingMenu open={open} menuRef={menuRef} />
+      <FloatingMenu open={open} setOpen={setOpen} menuRef={menuRef} />
     </>
   );
 };

@@ -1,17 +1,22 @@
-import { useContext } from "react";
-import { format } from "date-fns";
-import "../styles/ArticlesList.css";
+import React, { useContext } from "react";
+import "../styles/BlogPage.css";
 import DataContext from "../context/DataContext";
-import { Link } from "react-router-dom";
+import { format } from "date-fns";
 
-const ArticlesList = () => {
+const BlogPage = () => {
   const { articles } = useContext(DataContext);
 
   return (
-    <section>
-      <h2 className="articles_list_title">Latest Articles</h2>
+    <div className="blog_page_container">
+      <section className="blog_heading">
+        <h2>My Articles</h2>
+        <p>
+          Below are all my recent blog posts. Click on any title to read the
+          full article.
+        </p>
+      </section>
       <section className="articles_wrapper">
-        {articles?.slice(0, 5)?.map((article, index) => (
+        {articles?.map((article, index) => (
           <div key={index}>
             <h2
               style={{
@@ -31,18 +36,14 @@ const ArticlesList = () => {
             >
               {format(new Date(`${article.publishedAt}`), "MMMM d, yyyy")}
             </span>
+            <div style={{ color: "#4A4846", fontSize: "18px" }}>
+              {article.description}
+            </div>
           </div>
         ))}
-        {articles?.length > 5 && (
-          <button className="viewall_btn">
-            <Link style={{ textDecoration: "none", color: "unset" }} to="/blog">
-              View All Articles
-            </Link>
-          </button>
-        )}
       </section>
-    </section>
+    </div>
   );
 };
 
-export default ArticlesList;
+export default BlogPage;
