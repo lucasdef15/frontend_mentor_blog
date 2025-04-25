@@ -1,0 +1,31 @@
+.footer_section {
+  width: 90%;
+  margin-inline: auto;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.link_footer {
+  display: flex;
+  gap: 1rem;
+}
+.link_footer button {
+  cursor: pointer;
+}
+/* =========================
+  MEDIA QUERIES
+========================= */
+@media (min-width: 768px) {
+  /* styles for screens 768px bigger  */
+  .footer_section {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .footer_section {
+    width: 50%;
+    max-width: 640px;
+  }
+}

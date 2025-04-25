@@ -1,0 +1,143 @@
+/* ====================
+   Hero Section Styles
+==================== */
+.hero_section {
+  position: relative;
+  top: -10px;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  min-height: 100vh;
+  margin-inline: auto;
+
+  padding: 20px;
+  padding-bottom: 3rem;
+
+  background: #fbf9f7;
+  border: 1px solid #1c1a1911;
+  color: #4a4846;
+  font-size: 18px;
+}
+
+/* ===============================
+   Hero Apresentation Wrapper
+=============================== */
+.hero_apresentation_wrapper {
+  width: 100%;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #1c1a191a;
+}
+
+/* ====================
+   Hero Title (h1)
+==================== */
+.hero_section h1 {
+  position: relative;
+
+  margin-block: 2rem;
+
+  font-family: "DMSans", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.2;
+
+  color: #34302d;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.hero_section h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 310px;
+  height: 10px;
+  background-color: #add8ff;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* ====================
+   Hero Apresentation
+==================== */
+.hero_apresentation {
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+/* ====================
+   Wave Animation
+==================== */
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave-animation 2s infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ====================
+   Hero Links Section
+==================== */
+.hero_links_section {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero_links_section button {
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+
+  background: #ffffff;
+  border: 1px solid #1c1a191a;
+
+  cursor: pointer;
+}
+/* =========================
+  MEDIA QUERIES
+========================= */
+@media (min-width: 768px) {
+  /* styles for screens 768px bigger  */
+  .hero_section {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .hero_section {
+    width: 50%;
+    max-width: 640px;
+  }
+}

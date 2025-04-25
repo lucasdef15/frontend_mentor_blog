@@ -1,0 +1,53 @@
+/* =========================
+   Articles Wrapper
+========================= */
+.articles_wrapper {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* =========================
+     Articles List Title
+  ========================= */
+.articles_list_title {
+  position: relative;
+  margin-bottom: 2.5rem;
+
+  font-size: 32px;
+  font-weight: 900;
+  color: #34302d;
+}
+
+.articles_list_title::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 270px;
+
+  width: 55px;
+  height: 4px;
+  background: #add8ff;
+}
+
+/* =========================
+     View All Button
+  ========================= */
+.viewall_btn {
+  position: relative;
+  margin-top: 1rem;
+
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.viewall_btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 145px;
+  height: 4px;
+  background: #add8ff;
+}

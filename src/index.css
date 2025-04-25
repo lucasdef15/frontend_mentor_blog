@@ -1,0 +1,156 @@
+/* =========================
+   Fonts - DM Sans
+========================= */
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-Italic-VariableFont_opsz.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* =========================
+   Fonts - Fira Code
+========================= */
+@font-face {
+  font-family: "FiraCode";
+  src: url("/assets/fonts/Fira_Code/static/FiraCode-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("/assets/fonts/Fira_Code/static/FiraCode-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+}
+
+/* =========================
+   Reset & Base Styles
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "DMSans", sans-serif;
+  background: #fbf9f7;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  all: unset;
+}
+
+/* =========================
+   App Container
+========================= */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+}
+
+/* =========================
+   Decorative Patterns
+========================= */
+.patterns_wrapper {
+  position: relative;
+}
+
+.patterns_wrapper .pattern_01 {
+  position: absolute;
+  top: 100px;
+  left: -100px;
+}
+
+.patterns_wrapper .pattern_02 {
+  position: absolute;
+  top: -70px;
+  right: -100px;
+}
