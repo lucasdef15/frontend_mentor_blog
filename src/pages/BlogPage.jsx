@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "../styles/BlogPage.css";
 import DataContext from "../context/DataContext";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 const BlogPage = () => {
   const { articles } = useContext(DataContext);
@@ -18,15 +19,17 @@ const BlogPage = () => {
       <section className="articles_wrapper">
         {articles?.map((article, index) => (
           <div key={index}>
-            <h2
-              style={{
-                color: "#34302d",
-                fontSize: "20px",
-                marginBottom: ".5rem",
-              }}
-            >
-              {article.title}
-            </h2>
+            <Link to={`/blog/${article.slug}`}>
+              <h2
+                style={{
+                  color: "#34302d",
+                  fontSize: "20px",
+                  marginBottom: ".5rem",
+                }}
+              >
+                {article.title}
+              </h2>
+            </Link>
             <span
               style={{
                 color: "#4a4846",

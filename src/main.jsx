@@ -2,27 +2,53 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Updated imports
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import BlogPage from "./pages/BlogPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import NewsletterPage from "./pages/NewsletterPage.jsx";
+import SmoothScrollToTop from "./components/SmoothScrollToTop .jsx";
+import SingleBlogPage from "./pages/SingleBlogPage.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <SmoothScrollToTop />
+        <App />
+      </>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "blog",
+        element: <BlogPage />,
+      },
+      {
+        path: "blog/:slug",
+        element: <SingleBlogPage />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "newsletter",
+        element: <NewsletterPage />,
+      },
+    ],
+  },
+]);
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <Router>
-      <Routes>
-        {/* Parent route wrapping the common layout */}
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} /> {/* Default route for "/" */}
-          <Route path="blog" element={<BlogPage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="newsletter" element={<NewsletterPage />} />
-        </Route>
-      </Routes>
-    </Router>
+    <RouterProvider router={router} />
   </StrictMode>
 );

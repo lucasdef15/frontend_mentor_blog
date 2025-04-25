@@ -4,14 +4,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
 import { DataProvider } from "./context/DataContext";
-import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const device = useMediaQuery();
 
   return (
     <DataProvider>
-      <ScrollToTop />
       <Header />
       {device !== "mobile" && (
         <section className="patterns_wrapper">

@@ -5,6 +5,16 @@
   display: grid;
   gap: 1.5rem;
 }
+.articles_wrapper a {
+  text-decoration: none;
+}
+.articles_wrapper a:hover,
+.articles_wrapper h2:hover {
+  text-decoration: underline;
+  color: #34302d71 !important;
+  text-decoration-color: #34302d3f !important;
+  transition: all 200ms ease-in-out;
+}
 
 /* =========================
      Articles List Title

@@ -1,0 +1,220 @@
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+.single_blog_page_container {
+  position: relative;
+  top: -10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: 20px;
+  padding-bottom: 3rem;
+  background-color: #fbf9f7;
+  border: 1px solid #1c1a1911;
+  color: #4a4846;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+       CABEÇALHO DO POST
+  ========================= */
+.single_blog_page_heading {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.single_blog_page_heading h2 {
+  font-size: 40px;
+  color: #34302d;
+  line-height: 1.2;
+}
+
+.single_blog_page_heading p {
+  font-size: 16px;
+  color: #4a4846;
+  font-style: italic;
+}
+
+/* =========================
+       LINHA DIVISÓRIA
+  ========================= */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #34302d15;
+  margin: 1.5rem 0;
+}
+
+/* =========================
+       CONTEÚDO FORMATADO
+  ========================= */
+.single_blog_page_display_content h2 {
+  font-size: 28px;
+  margin-block: 1rem;
+}
+
+/* =========================
+       CITAÇÃO COM DETALHE
+  ========================= */
+.single_blog_page_display_content blockquote {
+  margin-left: 0.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+  font-style: italic;
+  color: #555;
+  margin-block: 1rem;
+}
+
+.single_blog_page_display_content blockquote::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 80px;
+  height: 5px;
+  background-color: #c0bfbf52;
+  transform: translateX(-50%) rotate(90deg); /* Center it and rotate */
+}
+
+/* =========================
+       ESTILOS DE DICAS, INFORMAÇÕES E ALERTAS
+  ========================= */
+.special-tip,
+.special-information,
+.special-warning {
+  position: relative;
+  font-style: normal !important;
+  border-radius: 1rem;
+  margin: 1rem 0 !important;
+  padding: 1rem 2.5rem !important;
+}
+.special-tip:before,
+.special-information:before,
+.special-warning::before {
+  content: none !important;
+  position: absolute;
+}
+
+.special-tip {
+  border: 1px solid #00853159;
+  background: #93cefc23;
+}
+
+.special-tip p {
+  font-size: 18px;
+}
+
+.special-tip strong {
+  position: relative;
+  display: block;
+}
+
+.special-tip::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 15px;
+  background-image: url("/assets/images/icon-tip.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.special-information {
+  border: 1px solid #93cefc;
+  background: #93cefc42;
+}
+
+.special-information::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 15px;
+  background-image: url("/assets/images/icon-info.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.special-warning {
+  border: 1px solid #ea9606b0;
+  background: #ea96061c;
+}
+
+.special-warning::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 15px;
+  background-image: url("/assets/images/icon-warning.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+       TABELAS
+  ========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+/* =========================
+       LISTAS
+  ========================= */
+.single_blog_page_display_content ol,
+.single_blog_page_display_content ul {
+  margin-inline: 1.2rem;
+  padding-left: 1rem;
+}
+
+.single_blog_page_display_content li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+       MEDIA QUERIES
+  ========================= */
+@media (min-width: 768px) {
+  .single_blog_page_container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .single_blog_page_container {
+    width: 50%;
+    max-width: 640px;
+  }
+}

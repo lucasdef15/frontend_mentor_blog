@@ -13,15 +13,17 @@ const ArticlesList = () => {
       <section className="articles_wrapper">
         {articles?.slice(0, 5)?.map((article, index) => (
           <div key={index}>
-            <h2
-              style={{
-                color: "#34302d",
-                fontSize: "20px",
-                marginBottom: ".5rem",
-              }}
-            >
-              {article.title}
-            </h2>
+            <Link to={`/blog/${article.slug}`}>
+              <h2
+                style={{
+                  color: "#34302d",
+                  fontSize: "20px",
+                  marginBottom: ".5rem",
+                }}
+              >
+                {article.title}
+              </h2>
+            </Link>
             <span
               style={{
                 color: "#4a4846",
