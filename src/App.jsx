@@ -25,9 +25,9 @@ const App = () => {
           />
         </section>
       )}
-      <main>
-        <Outlet />
-      </main>
+
+      <Outlet />
+
       <Footer />
     </DataProvider>
   );

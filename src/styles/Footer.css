@@ -3,9 +3,27 @@
   margin-inline: auto;
   font-size: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  border: 1px solid #1c1a1911;
+  border-top: none;
+  position: relative;
+  top: -10px;
+}
+.footer_section .separation {
+  background: #1c1a1911 !important;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 1rem;
+}
+.footer_links_wrapper {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
 }
 .link_footer {
   display: flex;

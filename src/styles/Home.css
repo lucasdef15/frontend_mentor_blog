@@ -18,6 +18,7 @@
 
   background: #fbf9f7;
   border: 1px solid #1c1a1911;
+  border-bottom: none;
   color: #4a4846;
   font-size: 18px;
 }
@@ -120,11 +121,23 @@
 
   padding: 0.8rem;
   border-radius: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
 
   background: #ffffff;
   border: 1px solid #1c1a191a;
 
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.hero_links_section button:hover {
+  background: #1c1a191a;
+}
+.hero_links_section button img {
+  width: 30px;
+  height: 30px;
 }
 /* =========================
   MEDIA QUERIES
