@@ -1,3 +1,6 @@
+/* =========================
+   BLOG PAGE CONTAINER
+========================= */
 .blog_page_container {
   position: relative;
   top: -10px;
@@ -7,21 +10,27 @@
   flex-direction: column;
 
   width: 90%;
+  max-width: 100%;
   min-height: 100vh;
   margin-inline: auto;
 
   padding: 20px;
   padding-bottom: 3rem;
 
-  background: #fbf9f7;
+  background-color: #fbf9f7;
   border: 1px solid #1c1a1911;
   color: #4a4846;
   font-size: 18px;
 }
+
+/* =========================
+   BLOG HEADING
+========================= */
 .blog_heading {
   padding-bottom: 2rem;
   border-bottom: 1px solid #1c1a1911;
 }
+
 .blog_heading h2 {
   color: #34302d;
   font-size: 32px;
@@ -29,34 +38,41 @@
   margin-top: 1rem;
   position: relative;
 }
+
 .blog_heading h2::after {
   content: "";
   position: absolute;
   width: 50px;
   height: 4px;
-  background: #add8ff;
+  background-color: #add8ff;
   bottom: 10px;
   left: 210px;
 }
+
 .blog_heading p {
   color: #4a4846;
   font-size: 18px;
   margin-top: 0.5rem;
 }
+
+/* =========================
+   ARTICLES WRAPPER
+========================= */
 .articles_wrapper {
   display: grid;
   gap: 2rem;
   margin-top: 2rem;
 }
+
 /* =========================
-  MEDIA QUERIES
+   MEDIA QUERIES
 ========================= */
 @media (min-width: 768px) {
-  /* styles for screens 768px bigger  */
   .blog_page_container {
     width: 80%;
   }
 }
+
 @media (min-width: 1024px) {
   .blog_page_container {
     width: 50%;
