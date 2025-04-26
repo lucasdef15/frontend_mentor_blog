@@ -1,10 +1,13 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  oneLight,
+  oneDark,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
 
-const MarkdownRenderer = ({ content }) => {
+const MarkdownRenderer = ({ content, darkMode }) => {
   // Helper function to recursively extract all text
   const extractText = (node) => {
     if (typeof node === "string") return node;
@@ -17,12 +20,11 @@ const MarkdownRenderer = ({ content }) => {
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
-        // Code blocks
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || "");
           return !inline && match ? (
             <SyntaxHighlighter
-              style={oneLight}
+              style={darkMode ? oneDark : oneLight} // 👈 Dynamic style
               language={match[1]}
               PreTag="div"
               {...props}
@@ -36,7 +38,6 @@ const MarkdownRenderer = ({ content }) => {
           );
         },
 
-        // Blockquotes with Tip, Information and Warning detection
         blockquote({ node, children, ...props }) {
           const text = extractText(children).toLowerCase();
           const hasTip = text.includes("tip");

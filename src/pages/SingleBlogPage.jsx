@@ -3,12 +3,11 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import DataContext from "../context/DataContext";
 import { format } from "date-fns";
-import ReactMarkdown from "react-markdown";
 import "../styles/SingleBlogPage.css";
 import MarkdownRenderer from "../components/MarkdownRenderer";
 
 const SingleBlogPage = () => {
-  const { articles } = useContext(DataContext);
+  const { articles, darkMode } = useContext(DataContext);
   const { slug } = useParams();
 
   const article = articles.find((article) => article.slug.toString() === slug);
@@ -25,7 +24,7 @@ const SingleBlogPage = () => {
               </p>
             </section>
             <section className="single_blog_page_display_content">
-              <MarkdownRenderer content={article.content} />
+              <MarkdownRenderer content={article.content} darkMode={darkMode} />
             </section>
           </>
         )}
