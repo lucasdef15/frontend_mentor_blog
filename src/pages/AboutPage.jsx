@@ -1,5 +1,9 @@
 import React from "react";
 import "../styles/AboutPage.css";
+import { SiFrontendmentor } from "react-icons/si";
+import { ImLinkedin2 } from "react-icons/im";
+import { BsTwitterX } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
@@ -58,16 +62,16 @@ const AboutPage = () => {
         <h3>Follow me</h3>
         <section className="about_links_section">
           <button>
-            <img src="/assets/images/logo-x.svg" alt="twitter" />
+            <BsTwitterX />
           </button>
           <button>
-            <img src="/assets/images/logo-github.svg" alt="twitter" />
+            <FaGithub />
           </button>
           <button>
-            <img src="/assets/images/logo-linkedin.svg" alt="twitter" />
+            <ImLinkedin2 />
           </button>
           <button>
-            <img src="/assets/images/logo-frontend-mentor.svg" alt="twitter" />
+            <SiFrontendmentor />
           </button>
         </section>
       </section>
