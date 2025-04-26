@@ -20,12 +20,36 @@
   color: #4a4846;
   font-size: 18px;
 }
-
+/* dark mode */
+.dark-mode .newsletter_page_wrapper {
+  background-color: #121212;
+  color: #fefefe;
+  border: 1px solid #ffffff3b;
+  border-bottom: none;
+}
+.dark-mode .newsletter_page_wrapper p {
+  color: #c0bfbf;
+}
+.dark-mode .newsletter_page_wrapper label {
+  color: #fefefec4;
+}
+.dark-mode .newslettter_form input {
+  border: 1px solid #ffffff2d;
+  background-color: #201e1d;
+  color: #fefefe;
+}
+.dark-mode .newslettter_form input::placeholder {
+  color: #fefefe9a;
+}
 .newsletter_page_wrapper h2 {
   margin-block: 1rem;
 }
 .newsletter_page_wrapper p {
   margin-bottom: 1rem;
+}
+.newsletter_page_wrapper h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 .newslettter_form {
   display: flex;
@@ -41,17 +65,72 @@
   width: 100%;
   max-width: 600px;
 }
+
+.dark-mode input:-webkit-autofill {
+  background-color: #201e1d;
+  color: #fefefe !important;
+  -webkit-box-shadow: 0 0 0 30px #201e1d inset !important;
+  -webkit-text-fill-color: #fefefe !important;
+}
+input:-webkit-autofill {
+  background-color: #fefefe;
+  color: #000000;
+  -webkit-box-shadow: 0 0 0 30px #201e1d inset;
+  -webkit-text-fill-color: #fefefe;
+}
+
+input.border-red-500 {
+  border: 1px solid #f04438 !important;
+}
+input.border-green-500 {
+  border: 1px solid #008531 !important;
+}
+.dark-mode .border-green-500 {
+  border: 1px solid #9dd3a9 !important;
+}
+.error-text-red {
+  color: #f04438 !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+  font-size: 16px;
+  width: 100%;
+}
+
 .newslettter_form input::placeholder {
   font-size: 18px;
 }
+.error-text-red svg,
+.error-text-green svg {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.dark-mode .error-text-green {
+  color: #9dd3a9 !important;
+}
+.error-text-green {
+  color: #008531 !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+  font-size: 16px;
+  width: 100%;
+}
+
 .newslettter_form button {
   background: #93cefc;
   padding: 0.5rem;
   padding-inline: 1.2rem;
   border-radius: 0.5rem;
   margin-block: 1rem;
-  color: #4a4846;
-  /* width: fit-content; */
+  color: #34302d;
   cursor: pointer;
   font-size: 18px;
 }
