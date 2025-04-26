@@ -19,8 +19,8 @@
 /* Dark mode */
 .dark-mode .articles_wrapper a:hover,
 .dark-mode .articles_wrapper h2:hover {
-  color: #ffffff5d !important;
-  text-decoration-color: #ffffff65 !important;
+  color: #c0bfbfbb !important;
+  text-decoration-color: #c0bfbfc4 !important;
 }
 
 /* =========================
@@ -67,4 +67,11 @@
   width: 145px;
   height: 4px;
   background: #add8ff;
+}
+
+/* dark mode */
+.dark-mode .viewall_btn::after {
+  content: "";
+  position: absolute;
+  background: #4d91cb;
 }

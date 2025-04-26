@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 
 const BlogPage = () => {
-  const { articles } = useContext(DataContext);
+  const { articles, darkMode } = useContext(DataContext);
 
   return (
     <div className="blog_page_container">
@@ -22,7 +22,7 @@ const BlogPage = () => {
             <Link to={`/blog/${article.slug}`}>
               <h2
                 style={{
-                  color: "#34302d",
+                  color: `${darkMode ? "#fefefe" : "#34302d"}`,
                   fontSize: "20px",
                   marginBottom: ".5rem",
                 }}
@@ -32,14 +32,19 @@ const BlogPage = () => {
             </Link>
             <span
               style={{
-                color: "#4a4846",
+                color: `${darkMode ? "#c0bfbf" : "#4a4846"}`,
                 fontSize: "16px",
                 fontStyle: "italic",
               }}
             >
               {format(new Date(`${article.publishedAt}`), "MMMM d, yyyy")}
             </span>
-            <div style={{ color: "#4A4846", fontSize: "18px" }}>
+            <div
+              style={{
+                color: `${darkMode ? "#c0bfbf" : "#4a4846"}`,
+                fontSize: "18px",
+              }}
+            >
               {article.description}
             </div>
           </div>

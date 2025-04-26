@@ -31,7 +31,7 @@ const ArticlesList = () => {
             </Link>
             <span
               style={{
-                color: darkMode ? "#fefefed5" : "#34302d",
+                color: darkMode ? "#C0BFBF" : "#34302d",
                 fontSize: "16px",
                 fontStyle: "italic",
               }}
