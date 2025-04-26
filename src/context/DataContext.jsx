@@ -4,6 +4,23 @@ const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
   const [articles, setArticles] = useState([]);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("darkMode") === "true";
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
+  const handleDarkModeClick = () => {
+    setDarkMode((prev) => !prev);
+  };
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -19,7 +36,9 @@ export const DataProvider = ({ children }) => {
     fetchArticles();
   }, []);
   return (
-    <DataContext.Provider value={{ articles, setArticles }}>
+    <DataContext.Provider
+      value={{ articles, setArticles, darkMode, handleDarkModeClick }}
+    >
       {children}
     </DataContext.Provider>
   );

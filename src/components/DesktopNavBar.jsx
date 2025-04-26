@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import DataContext from "../context/DataContext";
 
 const DesktopNavBar = () => {
+  const { handleDarkModeClick, darkMode } = useContext(DataContext);
+
   return (
     <>
       <section className="desktop_navbar">
@@ -30,8 +33,17 @@ const DesktopNavBar = () => {
           </section>
 
           <section>
-            <button className="toggle_dark">
-              <img src="/assets/images/icon-moon.svg" alt="dark mode" />
+            <button
+              type="button"
+              className="toggle_dark"
+              onClick={handleDarkModeClick}
+            >
+              <img
+                src={`/assets/images/${
+                  darkMode ? "icon-sun.svg" : "icon-moon.svg"
+                }`}
+                alt="dark mode"
+              />
             </button>
           </section>
         </div>

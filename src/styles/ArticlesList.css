@@ -1,6 +1,7 @@
 /* =========================
    Articles Wrapper
 ========================= */
+/* Light mode (default) */
 .articles_wrapper {
   display: grid;
   gap: 1.5rem;
@@ -14,6 +15,12 @@
   color: #34302d71 !important;
   text-decoration-color: #34302d3f !important;
   transition: all 200ms ease-in-out;
+}
+/* Dark mode */
+.dark-mode .articles_wrapper a:hover,
+.dark-mode .articles_wrapper h2:hover {
+  color: #ffffff5d !important;
+  text-decoration-color: #ffffff65 !important;
 }
 
 /* =========================

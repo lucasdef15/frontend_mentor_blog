@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/Home.css";
 import ArticlesList from "../components/ArticlesList";
+import DataContext from "../context/DataContext";
+import { SiFrontendmentor } from "react-icons/si";
+import { ImLinkedin2 } from "react-icons/im";
+import { BsTwitterX } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 
 const Home = () => {
+  const { darkMode } = useContext(DataContext);
   return (
     <article className="hero_section">
       <section className="hero_apresentation_wrapper">
-        <h1>
+        <h1 style={{ color: darkMode ? "#FEFEFE" : "" }}>
           Hi, I’m Paulina <span className="wave">👋</span>
         </h1>
         <section className="hero_apresentation">
@@ -26,16 +32,16 @@ const Home = () => {
         </section>
         <section className="hero_links_section">
           <button>
-            <img src="/assets/images/logo-x.svg" alt="twitter" />
+            <BsTwitterX />
           </button>
           <button>
-            <img src="/assets/images/logo-github.svg" alt="twitter" />
+            <FaGithub />
           </button>
           <button>
-            <img src="/assets/images/logo-linkedin.svg" alt="twitter" />
+            <ImLinkedin2 />
           </button>
           <button>
-            <img src="/assets/images/logo-frontend-mentor.svg" alt="twitter" />
+            <SiFrontendmentor />
           </button>
         </section>
       </section>

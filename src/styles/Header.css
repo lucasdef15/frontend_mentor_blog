@@ -11,6 +11,12 @@
   z-index: 2;
   box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.048);
 }
+/* dark mode */
+.dark-mode .header {
+  background: #201e1d;
+  color: #fefefe !important;
+  border: 1px solid #34302d;
+}
 /* =========================
    DESKTOP NAVBAR
 ========================= */
@@ -19,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  z-index: 1;
 }
 .avatar {
   border-radius: 0.7rem;
@@ -28,6 +35,7 @@
 .desktop_wrapper_links {
   display: flex;
   gap: 1.5rem;
+  z-index: 1;
 }
 .desktop_nav_links {
   width: 100%;
@@ -36,6 +44,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+  z-index: 1;
 }
 .desktop_nav_link {
   text-decoration: none;
@@ -61,6 +70,13 @@
 }
 .desktop_nav_link:hover::after {
   width: 100%;
+}
+/* dark mode */
+.dark-mode .desktop_nav_link {
+  color: #fefefe;
+}
+.dark-mode .desktop_nav_link::after {
+  background: #4d91cb !important;
 }
 /* Keep this for active state */
 .desktop_nav_link.active::after {
@@ -103,9 +119,20 @@
 .mobile_nav_btn {
   background: white;
 }
+.mobile_nav_btn svg {
+  width: 20px;
+  height: 20px;
+}
 
 .mobile_nav_btn_open {
   background: #333;
+}
+
+.dark-mode .mobile_nav_btn {
+  background: #201e1d;
+}
+.dark-mode .open {
+  background: #fefefe !important;
 }
 
 .toggle_dark {
@@ -114,6 +141,20 @@
   cursor: pointer;
   background: #efedeb;
   border: 1px solid #1c1a191a;
+  z-index: 10;
+  pointer-events: auto;
+  position: relative;
+}
+.toggle_dark:hover {
+  background: #ddddddd7;
+}
+
+.dark-mode .toggle_dark {
+  background: #201e1d;
+  border: 1px solid #34302df1;
+}
+.dark-mode .toggle_dark:hover {
+  background: #fdfdfd1e;
 }
 
 /* =========================
@@ -132,6 +173,24 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* dark mode */
+.dark-mode .floating_paper {
+  background: #201e1d;
+  border: 1px solid #34302df1;
+}
+.dark-mode .nav-link {
+  color: #fefefe7c;
+}
+.dark-mode .nav-link:not(:last-child)::after {
+  background: #ffffff25;
+}
+.dark-mode .nav-link:hover {
+  color: #fefefe;
+}
+.dark-mode .nav-link.active {
+  color: #fefefe;
+}
+
 /* =========================
    NAV LINKS MOBILE
 ========================= */
@@ -142,7 +201,6 @@
   gap: 1rem;
   padding-inline: 1rem;
 }
-
 .nav-link {
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -153,7 +211,6 @@
   position: relative;
   transition: background 0.2s ease;
 }
-
 .nav-link:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -163,13 +220,11 @@
   left: 15px;
   background: #4a48460c;
 }
-
 .nav-link:hover {
   color: #1c1a19;
 }
-
 .nav-link.active {
-  color: #1c1a19; /* darker color to show it's active */
+  color: #1c1a19;
 }
 
 /* =========================

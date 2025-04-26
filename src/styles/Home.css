@@ -22,6 +22,12 @@
   color: #4a4846;
   font-size: 18px;
 }
+.dark-mode .hero_section {
+  background-color: #121212;
+  color: #fefefe;
+  border: 1px solid #ffffff3b;
+  border-bottom: none;
+}
 
 /* ===============================
    Hero Apresentation Wrapper
@@ -30,6 +36,10 @@
   width: 100%;
   margin-bottom: 3rem;
   border-bottom: 1px solid #1c1a191a;
+}
+/* dark mode */
+.dark-mode .hero_apresentation_wrapper {
+  border-bottom: 1px solid #ffffff3b;
 }
 
 /* ====================
@@ -60,6 +70,11 @@
   background-color: #add8ff;
   border-radius: 4px;
   z-index: -1;
+}
+
+/* title dark mode */
+.dark-mode .hero_section h1::after {
+  background-color: #4d91cb !important;
 }
 
 /* ====================
@@ -114,7 +129,6 @@
   display: flex;
   gap: 1rem;
 }
-
 .hero_links_section button {
   margin-top: 0.5rem;
   margin-bottom: 3rem;
@@ -135,9 +149,18 @@
 .hero_links_section button:hover {
   background: #1c1a191a;
 }
-.hero_links_section button img {
+.hero_links_section button svg {
   width: 30px;
   height: 30px;
+}
+/* dark mode */
+.dark-mode .hero_links_section button {
+  background: #201e1d;
+  border: 1px solid #34302df1;
+}
+.dark-mode .hero_links_section button:hover {
+  background: #c7c7c73f;
+  border: 1px solid #34302df1;
 }
 /* =========================
   MEDIA QUERIES

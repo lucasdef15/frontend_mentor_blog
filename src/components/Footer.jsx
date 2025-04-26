@@ -1,5 +1,9 @@
 import React from "react";
 import "../styles/Footer.css";
+import { SiFrontendmentor } from "react-icons/si";
+import { ImLinkedin2 } from "react-icons/im";
+import { BsTwitterX } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,19 +14,16 @@ const Footer = () => {
           <p>Made with ❤️ and ☕️</p>
           <section className="link_footer">
             <button>
-              <img src="/assets/images/logo-x.svg" alt="twitter" />
+              <BsTwitterX />
             </button>
             <button>
-              <img src="/assets/images/logo-github.svg" alt="twitter" />
+              <FaGithub />
             </button>
             <button>
-              <img src="/assets/images/logo-linkedin.svg" alt="twitter" />
+              <ImLinkedin2 />
             </button>
             <button>
-              <img
-                src="/assets/images/logo-frontend-mentor.svg"
-                alt="twitter"
-              />
+              <SiFrontendmentor />
             </button>
           </section>
         </div>

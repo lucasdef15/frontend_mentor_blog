@@ -18,6 +18,16 @@
   height: 1px;
   margin-bottom: 1rem;
 }
+
+/* dark Mode */
+.dark-mode .footer_section {
+  border: 1px solid #ffffff3b;
+  border-top: none;
+}
+.dark-mode .separation {
+  background: #ffffff3b !important;
+}
+
 .footer_links_wrapper {
   width: 100%;
   display: flex;

@@ -1,7 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { gsap } from "gsap";
+import DataContext from "../context/DataContext";
+import { MdOutlineMenu } from "react-icons/md";
+import { MdOutlineClose } from "react-icons/md";
 
 const MobileNavBar = ({ open, setOpen }) => {
+  const { handleDarkModeClick, darkMode } = useContext(DataContext);
+
   const menuBtnRef = useRef(null);
 
   useEffect(() => {
@@ -26,19 +31,33 @@ const MobileNavBar = ({ open, setOpen }) => {
         <section className="mobile_nav_btns">
           <button
             ref={menuBtnRef}
-            className="mobile_nav_btn"
+            className={`${
+              open && darkMode ? "mobile_nav_btn open" : "mobile_nav_btn"
+            }`}
             onClick={() => setOpen(!open)}
           >
-            <img
-              src={`/assets/images/${
-                open ? "icon-menu-close.svg" : "icon-menu.svg"
-              }`}
-              alt="menu mobile"
-            />
+            {open ? (
+              <MdOutlineClose
+                style={{ color: darkMode ? "#201e1d" : "#fefefe" }}
+              />
+            ) : (
+              <MdOutlineMenu />
+            )}
           </button>
-          <button className="toggle_dark">
-            <img src="/assets/images/icon-moon.svg" alt="dark mode" />
-          </button>
+          <section>
+            <button
+              type="button"
+              className="toggle_dark"
+              onClick={handleDarkModeClick}
+            >
+              <img
+                src={`/assets/images/${
+                  darkMode ? "icon-sun.svg" : "icon-moon.svg"
+                }`}
+                alt="dark mode"
+              />
+            </button>
+          </section>
         </section>
       </section>
     </>
