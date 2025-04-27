@@ -80,8 +80,16 @@ hr {
 .dark-mode .single_blog_page_display_content {
   color: #fefefe;
 }
-.dark-mode ul,
+ul {
+  color: #4a4846 !important;
+}
+.dark-mode ul {
+  color: #c0bfbf !important;
+}
 ol {
+  color: #4a4846 !important;
+}
+.dark-mode ol {
   color: #c0bfbf !important;
 }
 /* =========================
