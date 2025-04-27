@@ -17,7 +17,6 @@ const Home = () => {
 
   const heroTitle = useRef(null);
   const heroApresentation = useRef(null);
-  // const articles = useRef(null);
   const articleRef = useRef([]);
   const heroLinks = useRef(null);
 
@@ -37,30 +36,6 @@ const Home = () => {
       }
     );
   }, []);
-
-  // // Animation for articles section
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     articleRef.current,
-  //     { scale: 0.5, opacity: 0 },
-  //     {
-  //       scale: 1,
-  //       opacity: 1,
-  //       duration: 2,
-  //       stagger: 0.2,
-  //       ease: "back.out(1.7)",
-  //       scrollTrigger: {
-  //         trigger: articleRef.current,
-  //         start: "top 80%",
-  //         end: "bottom 20%",
-  //         markers: true,
-  //         scrub: true,
-  //         toggleActions: "play reverse play reverse",
-  //         once: false,
-  //       },
-  //     }
-  //   );
-  // }, [articleRef]);
 
   // Animation for hero_apresentation
   useGSAP(() => {

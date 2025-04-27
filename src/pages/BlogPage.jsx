@@ -25,7 +25,7 @@ const BlogPage = () => {
       { y: 0, opacity: 1, duration: 1, ease: "power1.out" }
     );
 
-    // Animate paragraph (<p>) after the heading with a delay
+    // Animate paragraph (<p>)
     gsap.fromTo(
       paragraphRef.current,
       { opacity: 0, y: 50 },
@@ -40,11 +40,11 @@ const BlogPage = () => {
   }, []);
 
   useGSAP(() => {
-    if (!articles?.length) return; // no articles, don't animate yet
+    if (!articles?.length) return;
 
     const elements = articlesRef.current;
 
-    if (!elements.length) return; // still no elements, skip
+    if (!elements.length) return;
 
     gsap.fromTo(
       elements,
