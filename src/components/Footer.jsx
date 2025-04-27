@@ -11,7 +11,8 @@ const Footer = () => {
       <footer className="footer_section">
         <span className="separation" />
         <div className="footer_links_wrapper">
-          <p>Made with ❤️ and ☕️</p>
+          <p>Made with ❤️ and ☕️ by Lucas F.</p>{" "}
+          {/* ← added your signature here */}
           <section className="link_footer">
             <button>
               <BsTwitterX />

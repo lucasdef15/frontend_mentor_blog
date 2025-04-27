@@ -143,7 +143,7 @@ body.dark-mode h2::after {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 main {
@@ -155,6 +155,7 @@ main {
 ========================= */
 .patterns_wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .patterns_wrapper .pattern_01 {

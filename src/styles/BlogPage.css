@@ -35,6 +35,7 @@
    BLOG HEADING
 ========================= */
 .blog_heading {
+  opacity: 0;
   padding-bottom: 2rem;
   border-bottom: 1px solid #1c1a1911;
 }

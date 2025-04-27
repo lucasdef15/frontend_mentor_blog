@@ -3,6 +3,8 @@
 ========================= */
 .header {
   width: 92%;
+  position: sticky;
+  top: 0;
   margin-inline: auto;
   margin-top: 1rem;
   border-radius: 0.5rem;
