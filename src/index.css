@@ -154,13 +154,16 @@ main {
    Decorative Patterns
 ========================= */
 .patterns_wrapper {
-  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
   overflow: hidden;
+  z-index: 0;
 }
 
 .patterns_wrapper .pattern_01 {
   position: absolute;
-  top: 100px;
+  top: 200px;
   left: -100px;
 
   pointer-events: none;
@@ -168,7 +171,7 @@ main {
 
 .patterns_wrapper .pattern_02 {
   position: absolute;
-  top: -70px;
-  right: -100px;
+  top: -0px;
+  right: -80px;
   pointer-events: none;
 }

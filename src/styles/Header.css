@@ -10,7 +10,7 @@
   border-radius: 0.5rem;
   background: #ffff;
   border: 1px solid #1c1a1911;
-  z-index: 2;
+  z-index: 9999;
   box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.048);
 }
 /* dark mode */
