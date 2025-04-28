@@ -59,7 +59,8 @@ const AboutPage = () => {
         scrollTrigger: {
           trigger: imageRef.current,
           start: "top 100%",
-          end: "bottom 20%",
+          end: "bottom 10%",
+          markers: true,
           toggleActions: "play reverse play stop",
           once: false,
         },
