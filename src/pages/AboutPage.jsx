@@ -60,8 +60,8 @@ const AboutPage = () => {
           trigger: imageRef.current,
           start: "top 100%",
           end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: true,
+          toggleActions: "play reverse play stop",
+          once: false,
         },
       }
     );
